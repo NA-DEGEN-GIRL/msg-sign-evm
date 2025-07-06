@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Message Signer</title>
+</head>
+<body>
+  <h3>Sign a message with Rabby/MetaMask</h3>
+  <button id="connect">Connect Wallet</button>
+  <div id="address"></div>
+  <input id="msg" placeholder="Enter the message to sign" style="width:300px;">
+  <button id="sign">Sign</button>
+  <div>Signature result:</div>
+  <textarea id="result" rows="3" style="width:300px;"></textarea>
+  <script>
+    let account;
+    document.getElementById('connect').onclick = async () => {
+      if (!window.ethereum) return alert('Please install Rabby or MetaMask');
+      const acc = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      account = acc[0];
+      document.getElementById('address').innerText = `Wallet: ${account}`;
+    };
+    document.getElementById('sign').onclick = async () => {
+      if (!account) return alert('Please connect your wallet first.');
+      const msg = document.getElementById('msg').value;
+      if (!msg) return alert('Please enter a message.');
+      try {
+        const sign = await window.ethereum.request({
+          method: 'personal_sign',
+          params: [msg, account],
+        });
+        document.getElementById('result').value = sign;
+      } catch (e) {
+        alert('Signing failed: ' + e.message);
+      }
+    };
+  </script>
+</body>
+</html>
