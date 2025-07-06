@@ -10,11 +10,20 @@
 
 ## 사용 방법
 
-1. [index.html](./index.html) 파일을 브라우저에서 실행하세요.
-2. 'Connect Wallet' 버튼을 클릭해 Rabby 또는 MetaMask 지갑에 연결합니다.
-3. 'Enter the message to sign' 입력창에 증명할 메시지를 입력하세요.
-4. 'Sign' 버튼을 클릭하면, 지갑에서 서명 요청이 뜹니다.
-5. 서명 후, 결과(Signature)를 확인할 수 있습니다.
+1. 터미널에서 프로젝트 폴더로 이동하세요.
+2. [http-server](https://www.npmjs.com/package/http-server) 패키지를 설치하지 않았다면 먼저 설치합니다.
+   ```bash
+   npm install -g http-server
+   ```
+3. 다음 명령어로 로컬 서버를 실행합니다.
+   ```bash
+   http-server .
+   ```
+4. 브라우저에서 `http://localhost:8080` 주소로 접속하세요.
+5. 'Connect Wallet' 버튼을 클릭해 Rabby 또는 MetaMask 지갑에 연결합니다.
+6. 'Enter the message to sign' 입력창에 증명할 메시지를 입력하세요.
+7. 'Sign' 버튼을 클릭하면, 지갑에서 서명 요청이 뜹니다.
+8. 서명 후, 결과(Signature)를 확인할 수 있습니다.
 
 ## 필요 환경
 
@@ -43,11 +52,20 @@ You can use it to prove wallet ownership to parties like exchanges (e.g. for ver
 
 ## How to Use
 
-1. Open the [index.html](./index.html) file in your web browser.
-2. Click the 'Connect Wallet' button to connect your Rabby or MetaMask wallet.
-3. Enter the message to sign in the input box.
-4. Click the 'Sign' button. Your wallet will ask you to confirm the message signing.
-5. After signing, your signature will be displayed in the result area.
+1. Open a terminal and navigate to your project folder.
+2. If you haven't installed [http-server](https://www.npmjs.com/package/http-server), install it:
+   ```bash
+   npm install -g http-server
+   ```
+3. Start the local server:
+   ```bash
+   http-server .
+   ```
+4. Open your browser and go to `http://localhost:8080`.
+5. Click the 'Connect Wallet' button to connect your Rabby or MetaMask wallet.
+6. Enter the message to sign in the input box.
+7. Click the 'Sign' button. Your wallet will ask you to confirm the message signing.
+8. After signing, your signature will be displayed in the result area.
 
 ## Requirements
 
