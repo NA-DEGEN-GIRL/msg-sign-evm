@@ -28,3 +28,36 @@
 
 ## 라이선스
 MIT
+
+---
+
+# EVM Wallet Message Signer (English)
+
+This project is a simple web page that helps users sign arbitrary messages using EVM-based wallets such as Rabby or MetaMask.  
+You can use it to prove wallet ownership to parties like exchanges (e.g. for verification or KYC purposes).
+
+## Features
+- Connect EVM wallets (Rabby/MetaMask)
+- Enter and sign any message
+- Display and easily copy the generated signature
+
+## How to Use
+
+1. Open the [index.html](./index.html) file in your web browser.
+2. Click the 'Connect Wallet' button to connect your Rabby or MetaMask wallet.
+3. Enter the message to sign in the input box.
+4. Click the 'Sign' button. Your wallet will ask you to confirm the message signing.
+5. After signing, your signature will be displayed in the result area.
+
+## Requirements
+
+- Web browser (Chrome, Firefox, etc.)
+- EVM-compatible browser wallet such as MetaMask or Rabby
+
+## Notes
+
+- Signing a message uses your private key; do this only in a trusted environment.
+- This project is intended for testing or personal use only.
+
+## License
+MIT
